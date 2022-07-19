@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Smooch+Sans:wght@300&display=swap');
+
+
+$colorprimario: #000;
+$colorsecundario: #361500;
+$colorterceario: #474747;
+$colorCuarto: #1ac4ee;
+$colorblanco: #fff;
+$colornegro: #000;
+$fuente1: 'Oswald', sans-serif;
+$fuente2: 'Smooch Sans', sans-serif;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+
+//   genericos
+body{
+    background-color: $colorterceario;
+    font-family: $fuente1;
+    text-transform: capitalize;
+}
+h1{
+    font-size: 4.2rem;
+    color: $colorblanco;
+    font-weight: bold;
+    font-family: $fuente2;
+    text-shadow: 3px 3px 5px black;
+}
+h2{
+    font-size: 3.8rem;
+    color: $colorblanco;
+    font-weight: bold;
+    font-family: $fuente2;
+    text-shadow: 3px 3px 5px black;
+    margin-bottom: 3rem;
+}
+h3{
+    font-size: 3.3rem;
+    font-weight: bold;
+}
+h4{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+p{
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: $colorblanco;
+    font-size: 1.5rem;
+}
+.textocentrado{
+    text-align: center;
+}
+
+
+.header{
+    background-color: $colorprimario;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedorHeader{
+    padding: 0.5rem;
+    text-align: center;
+}
+.barra{
+    min-height: 4rem;
+    padding: 0.5rem;
+}
+.imgLogo{
+    height: 3.5rem;
+    max-width: 15rem;
+    width: 100%;
+}
+.navegacion{
+    margin: 0.5rem;
+    a{
+        display: block;
+        margin: 0.5rem;
+    }
+}
+.itemNav{
+    margin: 0.3rem;
+    color: $colorblanco;
+    font-size: 1.5rem;
+    width: 100%;
+    transition: color, transform 0.8s;
+    
+    &:hover{
+        text-decoration: none;
+        color: $colorCuarto;
+        transition: color, transform 0.3s;
+        transform: scale(1.2);
+    }
+}
+.hero{
+    background-image: url(../IMG/hero.jpeg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorHero{
+    color: $colorblanco;
+    text-align: center;
+    p{
+        font-size: 2rem;
+    }
+}
+
+.chat{
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+    background-color: $colornegro;
+    color: $colorblanco;
+    width: 20rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 2.5rem;
+    font-family: $fuente1;
+    font-weight: bold;
+    border: 2px solid $colorCuarto;
+    border-radius: 1rem 1rem 0 0;
+    transition:background-color 0.5s;
+    z-index:10;
+
+    &:hover{
+    background-color: #1ac4ee;
+    transition:background-color 0.5s;
+    }
+
+    a{
+        font-size: 2rem;
+        text-decoration: none;
+        &:hover{
+            color: $colorblanco;
+        }
+    }
+}
+.contenedorMain{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.titulo{
+    margin: 1.5rem 0 2rem 0;
+}
+.foto{
+    width: 99%;
+    margin: 0rem auto;
+    border: 2px solid $colorprimario;
+    border-radius: 1rem;
+    transition: transform 0.7s;
+
+
+    img{
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    &:hover{
+        transform: scale(1.05);
+        z-index:1;
+    }
+}
+.principal{
+    max-width: 100rem;
+    width: 95%;
+}
+
+
+.footer{
+    background-color: $colorprimario;
+    width: 100%;
+    height: auto;
+    color: $colorblanco;
+    padding-top: 1rem;
+}
+.footeritem{
+    margin: 2rem auto;
+
+}
+.contenedorFooter{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 0rem;
+    width: 100%;
+}
+.enlace{
+    transition: color 0.8s;
+    &:hover{
+        text-decoration: none;
+        color: $colorCuarto;
+        transition: all 0.3s;
+    }
+}
+
+
+
+
+//portafolio
+.fondohuesos{
+    background-image: url(../IMG/fondopórtafolio.jpg);
+    padding: 5rem 0;
+}
+.contenedorPortafolio{
+    margin-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 3px solid black;
+    border-radius: 2rem;
+    padding: 0rem;
+}
+.cumpleanios_texto{
+    color: $colorblanco;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+    margin: 5rem 0;
+    
+    .cumple{
+        transition: transform 0.5s;
+        &:hover{
+            transform: scale(1.1);
+            transition: transform 0.5s;
+            z-index: 1;
+        }
+        img{
+            border: 5px solid gray;
+            border-radius: 10%;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+//Servicios
+.contenedorServicios{
+    @extend .contenedorPortafolio;
+    color: $colorblanco;
+    box-shadow: 1px 1px 5px rgb(146, 144, 144);
+    margin: 2rem;
+    padding: 1rem;
+}
+.paquetes{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 5rem;
+    gap: 2rem;
+    
+    
+
+    .paquete{
+        background-color: $colorterceario;
+        width: 95%;
+        height: 40rem;
+        border-radius: 3rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        margin: 1rem auto;
+    
+        .paqueteImg{
+            width: 100%;
+            height: 60%;
+            border-radius: 2rem;
+            background-image: url(../IMG/fotospaquete.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .paqueteBoton{
+            border: none;
+            
+            input{
+                font-size: 2rem;
+                width: 100%;
+                border: 1px solid $colorCuarto;
+                border-radius: 2rem;
+                font-weight: bold;
+                transition: all 0.7s;
+
+                &:hover{
+                    background-color: $colorCuarto;
+                    border: 1px solid $colorprimario;
+                    transition: all 0.7s;
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// sobre nosotros
+.main_informacion, .infor{
+    color: $colorblanco;
+}
+
+.fondo1nosotros{
+    background-image: url(../IMG/FondoNosotros.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:  40rem;
+    height:  auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_informacion{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgb(146, 144, 144);
+
+    p{
+        font-size: 1.5rem;
+        text-transform: none;
+    }
+}
+.comunicador{
+    background-image: url(../IMG/comun1.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 20rem;
+}
+.fondo2nosotros{
+    background-image: url(../IMG/Fondo2Nosotros.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:  40rem;
+    height:  auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.infor{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px rgb(146, 144, 144);
+
+    p{
+        font-size: 1.5rem;
+        text-transform: none;
+    }
+}
+.infor_mision{
+    margin-bottom: 5rem;
+}
+
+
+
+
+@media only screen and (min-width: 590px) {
+    .navegacion{
+        display: flex;
+        align-items: center;
+    }
+
+    .hero{
+        align-items: flex-start;
+        padding: 0 4rem;
+    }
+    .contenedorMain{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .paquetes{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .foto{
+
+        img{
+            height: 100%;
+        }
+    }
+    .fotogaleria8{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .fotogaleria9{
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+    .fotogaleria10{
+        grid-column: 1/3;
+        grid-row: 6/7;
+    }
+    .fotogaleria11{
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+    .fotogaleria12{
+        grid-column: 2/3;
+        grid-row: 8/10;
+    }
+    .fotogaleria13{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .iconos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .contenedorFooter{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+
+        .maps{
+            grid-column: 1/3;
+        }
+    }
+    
+    .contenedorPortafolio{
+        padding: 1rem;
+    }
+
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20rem;
+        gap: 1rem;
+        text-align: center;
+        
+        .cumple{
+            
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cumple2{
+            grid-column: 1/3;
+            grid-row: 3/4;
+
+        }
+    }
+    .hallowen2{
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    .hallowen4, .amor5{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .hallowen5{
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+}
+@media only screen and (min-width: 590px) and (max-width: 899px)  {
+    .paquete4{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .paquete5{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .paquete6{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}
+
+
+@media only screen and (min-width: 900px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .navegacion{
+            flex: 1;
+            justify-content: flex-end;
+            a{
+                display: inline-block;
+                width: auto;
+                margin: 0 2rem;
+            }
+        }
+    }
+    .main{
+        max-width: 110rem;
+        margin: 0 auto;
+    }
+    .paquetes{
+        grid-template-columns: repeat(3, 1fr);
+        .paquete{
+            width: 85%;
+        }
+    }
+    .contenedorMain{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 25rem);
+    }
+    .fotogaleria11{
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+    .fotogaleria9{
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+    .fotogaleria12{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .fondo2nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        .main_informacion{
+            grid-column: 1/3;
+        }
+    }
+    .contenedorPortafolio{
+        padding: 2rem;
+    }
+    .galeria{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 30rem);
+
+    }
+    .contenedorFooter{
+        grid-template-columns: repeat(3, 1fr);
+
+        .maps{
+            grid-column: unset;
+        }
+    }
+}
+
+
+
+
+
+// @mixin fondocate($bcolor){
+//     background-color: $bcolor;
+// }
+
+// $categorias: (
+//     cat1: 'Smooch Sans',
+//     cat2: 'Shizuru', 
+//     cat3: 'BhuTuka Expanded One',
+// );
+
+// @each $cate, $fuen in $categorias {
+//     .categoria-#{$cate}{
+//         @extend .nombreClase;
+//         text-align: center;
+//         font-family: $fuen;        
+
+//         h2{
+//             line-height: 300px;
+//             font-size: 80px;
+//         }
+
+
+//         @if $cate == cat1{
+//             @include fondocate(silver)
+//         }
+//         @else if $cate == cat2{
+//             @include fondocate(gold)
+//         }
+//         @else if $cate == cat3{
+//             @include fondocate(dodgerblue)
+//         }
+//         @else{
+//             background-color: black;
+//         }
+//     }    
+// }
